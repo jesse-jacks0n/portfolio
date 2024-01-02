@@ -16,6 +16,14 @@ import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 
 export default function Home() {
+    const aboutMe ="Hello! I'm Jesse, a passionate and detail-oriented Computer Science graduate\n" +
+        "with a strong foundation in software development and a genuine enthusiasm for technology.\n" +
+        "My academic journey has equipped me with a diverse skill set and a thirst for continuous learning.\n" +
+        "As a passionate and skilled Software Engineer, I bring creative solutions to life through website\n" +
+        "and mobile app development.\n" +
+        "Explore my portfolio to discover a showcase of my skills, projects, and experiences.\n" +
+        "Let's collaborate and innovate together.";
+
     return (
         <div className="h-screen  ">
             <div className=" bg-black flex items-center justify-center w-full">
@@ -33,13 +41,7 @@ export default function Home() {
             <div className="h-fit  flex flex-col mx-8 xl:mx-44 2xl:mx-96 text-black max-w-screen-xl ">
 
                 <h1 className=" mt-8 text-3xl font-medium ">About me</h1>
-                <h1 className=" text-md">Hello! I'm Jesse, a passionate and detail-oriented Computer Science graduate
-                    with a strong foundation in software development and a genuine enthusiasm for technology.
-                    My academic journey has equipped me with a diverse skill set and a thirst for continuous learning.
-                    As a passionate and skilled Software Engineer, I bring creative solutions to life through website
-                    and mobile app development.
-                    Explore my portfolio to discover a showcase of my skills, projects, and experiences.
-                    Let's collaborate and innovate together.</h1>
+                <h1 className=" text-md">{aboutMe}</h1>
 
                 <h1 className=" mt-8 text-3xl font-medium ">My Skills</h1>
                 <div className="grid grid-cols-2 mt-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
@@ -58,18 +60,17 @@ export default function Home() {
                     <h3 className="flex items-center text-sm gap-2"><Reacct/> ReactJS</h3>
                     <h3 className="flex items-center text-sm gap-2"><TypeScript/> TypeScript</h3>
                     <h3 className="flex items-center text-sm gap-2"><NodeJS/> NodeJS</h3>
-                    <h3 className="flex items-center text-sm gap-2"><NextJS/> NextJS</h3>
                 </div>
 
             </div>
 
             <section>
-                <Projects/>
+                {/*<Projects/>*/}
                 <div className="my-10 mx-8 flex flex-col gap-6 items-center justify-center text-xs sm:text-md sm:gap-10 sm:flex-row">
                     <div className=" flex items-center justify-center bg-gray-200 px-10 py-4 w-full sm:w-fit cursor-pointer hover:bg-gray-300"
                     onClick={() => window.location.href = "/projects"}
                     >
-                        <img className="w-8" src="/icons/arrow.png" alt="projects"/>All Projects</div>
+                        <img className="w-8" src="/icons/arrow.png" alt="projects"/>Projects</div>
                     <div className=" flex items-center justify-center bg-gray-200 px-10 py-4 w-full sm:w-fit cursor-pointer hover:bg-gray-300"
                             onClick={() => window.location.href = "/contact"}
                     >

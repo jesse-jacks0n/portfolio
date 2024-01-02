@@ -19,6 +19,7 @@ export default function Contact(){
             </div>
             <section className="h-fit  flex flex-col mx-8 xl:mx-44 2xl:mx-96 text-black max-w-screen-xl text-sm ">
                 <MailMeComponent/>
+
             </section>
             <Footer/>
         </div>

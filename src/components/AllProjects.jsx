@@ -21,23 +21,23 @@ const projects = [
     {
         title: 'Freelancer Website with React and Firebase',
         description: 'A freelance services website built using React for the frontend and Firebase for authentication and backend services.',
-        imageUrl: '/images/proj.jpg',
+        imageUrl: '/images/freelance.png',
         techUsed: ['React', 'Firebase'],
-        githubLink: 'https://github.com/your-username/your-repo',
+        githubLink: 'https://github.com/jesse-jacks0n/freelance.git',
         pdfLink: '/pdfs/project1.pdf',
     },
     {
         title: 'Simple BMI Calculator with Flutter',
         description: 'A basic Body Mass Index (BMI) calculator mobile app created with Flutter and Dart for quick and easy BMI calculations.',
-        imageUrl: '/images/proj.jpg',
+        imageUrl: '/images/bmi.png',
         techUsed: ['Flutter', 'Dart'],
         githubLink: 'https://github.com/your-username/your-repo',
         pdfLink: '/pdfs/project1.pdf',
     },
     {
-        title: 'Link Sharing App with Flutter',
+        title: 'Link Sharing App with Flutter (Private)',
         description: 'A mobile app developed using Flutter and Dart for sharing and managing links. Users can add, edit, and delete their shared links.',
-        imageUrl: '/images/proj.jpg',
+        imageUrl: '/images/soci.png',
         techUsed: ['Flutter', 'Dart'],
         githubLink: 'https://github.com/your-username/your-repo',
         pdfLink: '/pdfs/project1.pdf',
@@ -60,7 +60,7 @@ const AllProjects = () => {
     };
     return (
         <div className="container mx-auto mt-8">
-            <h2 className="text-3xl font-bold mb-6 mx-6">All Projects</h2>
+            <h2 className="text-3xl font-medium mb-6 mx-6">All Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {projects.map((project, index) => (
                     <div key={index} className="bg-white  border mb-8 border-gray-100 shadow-lg shadow-gray-200 p-6">

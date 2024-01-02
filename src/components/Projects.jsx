@@ -5,7 +5,7 @@ const projects = [
         title: 'Android App Example',
         techUsed: ['React Native', 'JavaScript', 'Firebase'],
         description: 'A mobile app developed using React Native, showcasing the use of Firebase for backend services.',
-        imageUrl: '/images/proj.jpg',
+        imageUrl: '/images/soci.png',
     },
     {
         title: 'Web Application Project',
