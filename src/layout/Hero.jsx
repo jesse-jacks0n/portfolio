@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {Link} from "react-router-dom";
 import ContactComponent from "../components/ContactComponent";
+import AOS from 'aos';
 
 export default function Hero() {
-
+    useEffect(() => {
+        AOS.init();
+    }, []);
     return (
         <div className="h-screen flex justify-center items-center ">
             <div className="sm:w-3/4 flex flex-col  max-h-fit md:flex-row gap-6 mx-auto justify-between max-w-6xl ">
@@ -15,13 +18,13 @@ export default function Hero() {
 
                     <div className="flex flex-col items-start sm:text-7xl text-5xl font-bold gap-y-4 ml-2">
                         <Link to={"/home"}
-                              className="hover:text-gray-700  ">HOME</Link>
+                              className="hover:text-gray-700  " data-aos="zoom-in-down" data-aos-duration="600">HOME</Link>
                         <Link to={"/projects"}
-                              className="hover:text-gray-700  ">PROJECTS</Link>
+                              className="hover:text-gray-700  " data-aos="zoom-in-down" data-aos-duration="700">PROJECTS</Link>
                         <Link to={"/about"}
-                              className="hover:text-gray-700 ">ABOUT</Link>
+                              className="hover:text-gray-700 " data-aos="zoom-in-down" data-aos-duration="1000">ABOUT</Link>
                         <Link to={"/contact"}
-                              className="hover:text-gray-700 ">CONTACT</Link>
+                              className="hover:text-gray-700 " data-aos="zoom-in-down" data-aos-duration="1300">CONTACT</Link>
                     </div>
                 </div>
 

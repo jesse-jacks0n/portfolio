@@ -1,8 +1,12 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Footer from "../components/Footer";
 import AllProjects from "../components/AllProjects";
+import AOS from 'aos';
 
 export default function Projects(){
+    useEffect(() => {
+        AOS.init();
+    }, []);
     return (
         <div className="h-screen">
             <div className=" bg-black flex items-center justify-center w-full">
@@ -14,8 +18,13 @@ export default function Projects(){
             </div>
             <div className="h-3/4 bg-black flex flex-col items-center justify-center text-white">
 
-                <h1 className=" name text-5xl font-medium sm:text-9xl">MY PROJECTS</h1>
-                <h1 className=" role text-xl sm:text-3xl mt-6 ">MADE WITH LOVE</h1>
+                <h1 className=" name text-5xl font-medium sm:text-9xl"
+                    data-aos="fade-up" // Add this attribute for the animation
+                    data-aos-duration="400"
+                >MY PROJECTS</h1>
+                <h1 className=" role text-xl sm:text-3xl mt-6 "
+                    data-aos="fade-up" // Add this attribute for the animation
+                    data-aos-duration="600">MADE WITH LOVE</h1>
             </div>
             <section>
                 <AllProjects/>

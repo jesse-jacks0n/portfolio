@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {
     CSharp,
     Css,
@@ -14,15 +14,14 @@ import {
 } from "../components/svg/Svg";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
+import AOS from 'aos';
 
 export default function Home() {
-    const aboutMe ="Hello! I'm Jesse, a passionate and detail-oriented Computer Science graduate\n" +
-        "with a strong foundation in software development and a genuine enthusiasm for technology.\n" +
-        "My academic journey has equipped me with a diverse skill set and a thirst for continuous learning.\n" +
-        "As a passionate and skilled Software Engineer, I bring creative solutions to life through website\n" +
-        "and mobile app development.\n" +
-        "Explore my portfolio to discover a showcase of my skills, projects, and experiences.\n" +
-        "Let's collaborate and innovate together.";
+    useEffect(() => {
+        AOS.init();
+    }, []);
+   const aboutMe = "Hello! I'm Jesse, a detail-oriented Computer Science graduate with a strong foundation in software development and a passion for technology. My journey has provided me with a diverse skill set and a commitment to continuous learning. As a Software Engineer, I create innovative solutions through web and mobile app development. Explore my portfolio to see my skills, projects, and experiences. Let's collaborate and innovate!";
+
 
     return (
         <div className="h-screen  ">
@@ -35,31 +34,33 @@ export default function Home() {
 
             <div className="h-3/4 bg-black flex flex-col items-center justify-center text-white">
 
-                <h1 className=" name text-5xl font-medium sm:text-9xl">Jesse Jackson</h1>
-                <h1 className=" role text-xl sm:text-3xl mt-6 ">Software Engineer</h1>
+                <h1 className=" name text-5xl font-medium sm:text-9xl"  data-aos="fade-up" // Add this attribute for the animation
+                    data-aos-duration="400">Jesse Jackson</h1>
+                <h1 className=" role text-xl sm:text-3xl mt-6 " data-aos="fade-up" // Add this attribute for the animation
+                    data-aos-duration="600">Software Engineer</h1>
             </div>
             <div className="h-fit  flex flex-col mx-8 xl:mx-44 2xl:mx-96 text-black max-w-screen-xl ">
 
                 <h1 className=" mt-8 text-3xl font-medium ">About me</h1>
-                <h1 className=" text-md">{aboutMe}</h1>
+                <h1 className=" text-md font-light">{aboutMe}</h1>
 
                 <h1 className=" mt-8 text-3xl font-medium ">My Skills</h1>
-                <div className="grid grid-cols-2 mt-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-                    <h3 className="flex items-center text-sm gap-2"><Css/> CSS</h3>
-                    <h3 className="flex items-center text-sm gap-2"><Html/> HTML</h3>
-                    <h3 className="flex items-center text-sm gap-2"><Tailwind/> Tailwind</h3>
-                    <h3 className="flex items-center text-sm gap-2"><Python/> Python</h3>
-                    <h3 className="flex items-center text-sm gap-2"><CSharp/> C#</h3>
-                    <h3 className="flex items-center text-sm gap-2"><Kotlin/> Kotlin</h3>
-                    <h3 className="flex items-center text-sm gap-2"><Java/> Java</h3>
-                    <h3 className="flex items-center text-sm gap-2"><Dart/> Dart</h3>
-                    <h3 className="flex items-center text-sm gap-2"><Flutter/> Flutter</h3>
-                    <h3 className="flex items-center text-sm gap-2"><Firebase/> Firebase</h3>
-                    <h3 className="flex items-center text-sm gap-2"><MongoDB/> MongoDB</h3>
-                    <h3 className="flex items-center text-sm gap-2"><JavaScript/> JavaScript</h3>
-                    <h3 className="flex items-center text-sm gap-2"><Reacct/> ReactJS</h3>
-                    <h3 className="flex items-center text-sm gap-2"><TypeScript/> TypeScript</h3>
-                    <h3 className="flex items-center text-sm gap-2"><NodeJS/> NodeJS</h3>
+                <div className="grid grid-cols-2 mt-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 list-disc">
+                    
+                    <li className="flex items-center text-sm gap-2"><Html/> HTML</li>
+                    <li className="flex items-center text-sm gap-2"><Tailwind/> Tailwind</li>
+                    <li className="flex items-center text-sm gap-2"><Python/> Python</li>
+                    <li className="flex items-center text-sm gap-2"><CSharp/> C#</li>
+                    <li className="flex items-center text-sm gap-2"><Kotlin/> Kotlin</li>
+                    <li className="flex items-center text-sm gap-2"><Java/> Java</li>
+                    <li className="flex items-center text-sm gap-2"><Dart/> Dart</li>
+                    <li className="flex items-center text-sm gap-2"><Flutter/> Flutter</li>
+                    <li className="flex items-center text-sm gap-2"><Firebase/> Firebase</li>
+                    <li className="flex items-center text-sm gap-2"><MongoDB/> MongoDB</li>
+                    <li className="flex items-center text-sm gap-2"><JavaScript/> JavaScript</li>
+                    <li className="flex items-center text-sm gap-2"><Reacct/> ReactJS</li>
+                    <li className="flex items-center text-sm gap-2"><TypeScript/> TypeScript</li>
+                    <li className="flex items-center text-sm gap-2"><NodeJS/> NodeJS</li>
                 </div>
 
             </div>
